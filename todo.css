@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #4e4b4b;
+}
+header {
+  padding: 2rem 1rem;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+.tasks-form {
+  display: flex;
+}
+.tasks-input {
+  flex: 1 1 0;
+  background-color: #4e4b4b;
+  border: 2px solid #000;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  color: #ffffff;
+  padding-left: 10px;
+  height: 4rem;
+}
+.tasks-input::placeholder {
+  color: #ffffff;
+  padding-left: 0px;
+}
+.tasks-submit {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.tasks-submit:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.container {
+  background-color: #000;
+  flex: 0% 1 0%;
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+.task-list {
+  padding: 1rem;
+}
+.tasks .task {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #4e4b4b;
+  /* border: 2px solid #ffffff; */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+.tasks .task .content {
+  display: flex;
+  flex: 1 1 0%;
+}
+.tasks .task .content .text {
+  background-color: #4e4b4b;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  width: 100%;
+  display: inline-block;
+}
+
+.tasks .task .content .text:not(:read-only) {
+  color: #22eb2c;
+  border: none;
+}
+.tasks .task .action {
+  display: flex;
+  margin: 0 --0.5rem;
+}
+.task .actions button {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0 0.5rem;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+.complete {
+  color: #eb8d22;
+  font-size: 1rem;
+  background-color: #4e4b4b;
+  border: none;
+}
+.edit {
+  color: #22eb2c;
+  background-color: #4e4b4b;
+  font-size: 1rem;
+  border: none;
+}
+.delete {
+  color: crimson;
+  background-color: #4e4b4b;
+  border: none;
+  font-size: 1rem;
+}
+.complete:hover {
+  transform: scale(1.1);
+  opacity: 0.6;
+}
+.edit:hover {
+  transform: scale(1.1);
+  opacity: 0.6;
+}
+.delete:hover {
+  transform: scale(1.1);
+  opacity: 0.6;
+}
+.strike {
+  text-decoration: line-through;
+}
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
